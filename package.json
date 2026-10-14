@@ -1,0 +1,21 @@
+{
+  "name": "anvia-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lens:up": "docker compose -f infra/lens/docker-compose.yml up -d",
+    "lens:down": "docker compose -f infra/lens/docker-compose.yml down",
+    "lens:logs": "docker compose -f infra/lens/docker-compose.yml logs -f --tail=100"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0"
+  },
+  "packageManager": "pnpm@12.11.2"
+}
